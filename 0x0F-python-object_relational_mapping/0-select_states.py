@@ -9,7 +9,9 @@ if __name__ == '__main__':
     
     cur = db.cursor()
     
-    states = cur.execute("SELECT * FROM states ORDER BY id")
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+
+    states = cur.fetchall();
     
     for state in states:
         print(state)
