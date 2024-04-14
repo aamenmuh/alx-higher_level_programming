@@ -12,7 +12,7 @@ if __name__ == '__main__':
     cur = db.cursor()
     cur.execute(f"SELECT * FROM states \
             WHERE CONVERT( `name` USING Latin1) \
-            COLLATE Latin1_General_CS = '{sys.argv[4]}' ORDER BY `id` ASC;"
+            COLLATE Latin1_General_CS = '{sys.argv[4]}' ORDER BY `id` ASC;")
     states = cur.fetchall()
 
     for state in states:
