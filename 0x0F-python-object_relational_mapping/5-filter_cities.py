@@ -12,8 +12,7 @@ if __name__ == '__main__':
     cur = db.cursor()
     cur.execute("SELECT cities.id, cities.name, states.name FROM cities \
             JOIN states ON cities.state_id = states.id \
-            WHERE CONVERT( `states.name` USING Latin1) \
-            COLLATE Latin1_General_CS = '{}' \
+            WHERE states.name = '{}' \
             ORDER BY `id` ASC;".format(sys.argv[4]))
     states = cur.fetchall()
 
