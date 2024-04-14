@@ -13,7 +13,7 @@ if __name__ == '__main__':
     cur.execute("SELECT * FROM states \
             WHERE CONVERT( `name` USING Latin1) \
             COLLATE Latin1_General_CS = %s \
-            ORDER BY `id` ASC;", sys.argv[4])
+            ORDER BY `id` ASC;", (sys.argv[4],))
     states = cur.fetchall()
 
     for state in states:
