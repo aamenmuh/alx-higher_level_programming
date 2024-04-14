@@ -17,7 +17,7 @@ if __name__ == '__main__':
     states = cur.fetchall()
 
     for state in states:
-        if (state != states[states.size()]):
-            print(state, ", ")
+        if (state != states[len(states) - 1]):
+            print(state, end=", ")
         else
-            print(state, "")
+            print(state)
