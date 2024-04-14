@@ -19,5 +19,5 @@ if __name__ == '__main__':
     for state in states:
         if (state != states[len(states) - 1]):
             print(state, end=", ")
-        else
+        else:
             print(state)
