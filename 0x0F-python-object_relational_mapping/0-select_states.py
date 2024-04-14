@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    main function to list all states
+Main function to list all states
 """
 import sys
 import MySQLdb
