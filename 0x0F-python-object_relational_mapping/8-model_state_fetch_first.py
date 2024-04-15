@@ -12,7 +12,7 @@ if __name__ == '__main__':
             :{sys.argv[2]}@localhost:3306/{sys.argv[3]}")
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = sessions.query(State).order_by(State.id).first()
+    state = session.query(State).order_by(State.id).first()
 
     if (not state):
         print("Nothing")
