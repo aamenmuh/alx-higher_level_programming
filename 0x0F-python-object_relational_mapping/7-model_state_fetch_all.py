@@ -12,7 +12,7 @@ if __name__ == '__main__':
             :{sys.argv[2]}@localhost:3306/{sys.argv[3]}")
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = sessions.query(State)
+    states = sessions.query(State).order_by(State.id).all()
 
     for state in states:
         print(f"{state.id}: {state.name}")
