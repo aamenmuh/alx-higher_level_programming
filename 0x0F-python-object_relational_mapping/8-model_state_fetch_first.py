@@ -17,4 +17,4 @@ if __name__ == '__main__':
     if (not state):
         print("Nothing")
     else:
-        print(f"{state.id}: {state.name}")
+        print("{}: {}".format(state.id, state.name))
